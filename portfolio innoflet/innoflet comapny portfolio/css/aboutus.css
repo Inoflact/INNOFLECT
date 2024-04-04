@@ -1,0 +1,227 @@
+
+@font-face {
+    font-family: pop;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+.about_section{
+    width: 100%;
+    height: auto;
+    background-color: #2e2b2b;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20%;
+}
+
+.about_img {
+    top: -113px;
+    left: 51px;
+    position: relative; /* Adding position: relative; for the parent container */
+}
+
+.first {
+    z-index: auto;
+    /* background-color: #FF5C35; */
+    border: 7px solid rgb(15, 243, 7);
+    top: -36px; /* Adjusting top position */
+    left: -36px; /* Adjusting left position */
+    position: absolute;
+    width: 207px;
+    height: 330px;
+    transform: rotate(71deg) skewy(20deg) skewX(351deg);
+}
+
+.second {
+    z-index: auto;
+    background-image: url(../image/image2.png);
+    background-size: cover;
+    border: 7px solid black;
+    top: 122px;
+    left: 17px; 
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    transform: rotate(3deg) skewy(347deg) skewX(2deg);
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) -5px 5px, rgba(0, 0, 0, 0.3) -10px 10px, rgba(43, 170, 0, 0.2) -15px 15px, rgba(0, 0, 0, 0.1) -10px 10px, rgba(0, 0, 0, 0.05) -0 0;
+}
+
+.third {
+    z-index: auto;
+    background-image: url(../image/image2.png);
+    background-size: cover;
+    border: 7px solid black;
+    top: -77px; 
+    left: -165px; 
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    transform: rotate(3deg) skewy(347deg) skewX(2deg);
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 5px, rgba(0, 0, 0, 0.3) 3px 11px, rgba(3, 170, 0, 0.2) 5px 15px, rgba(0, 0, 0, 0.1) 5px 10px, rgba(0, 0, 0, 0.05) 0 0;
+}
+
+  @media (max-width: 768px) {
+    .first,
+    .second,
+    .third {
+      display: none; /* Hide these elements on smaller screens */
+    }
+  }
+
+  .about_details{
+    margin: 32px -355px 38px 24px; 
+}
+.about_details h1{
+    font-size: 58px;
+    color: #fff;
+    position: relative;
+}
+.about_details h1::after{
+    content: " ";
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    background-color: #55f312;
+    border-radius: 5px;
+    left: 0;
+    bottom: 2px;
+}
+.about_details p{
+    font-size: 15px;
+    color: #fff;
+    max-width: 480px;
+    margin: 30px 0 45px 0;
+    line-height: 29px;
+    text-align: center;
+}
+/* .btn{
+    padding: 10px 25px;
+    border: 2px solid #12f316;
+    border-radius: 5px;
+    color: #3cff00;
+    text-decoration: none;
+    margin: 30px 0;
+    transition: all .5s ease;
+    font-weight: 600;
+}
+.btn:hover{
+    background-color: #48fb07;
+    color: #333333;
+}
+.btn1{
+    margin-right: 15px;
+    background-color: #00f800;
+    color: #000;
+}
+.btn1:hover{
+    background-color: transparent;
+    color: #00fd0d;
+} */
+.tabs {
+    width: 650px;
+    float: none;
+    list-style: none;
+    position: relative;
+    margin: 80px 0 0 10px;
+    text-align: center;
+}
+.tabs li {
+    float: left;
+    display: block;
+    margin-right: 20px; 
+  }
+.tabs input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+.tabs label {
+    display: block;
+    padding: 14px 21px;
+    border-radius: 25px 25px 25px 25px;
+    font-size: 25px;
+    font-weight: normal;
+    text-transform: uppercase;
+    background-color: #00f800;
+    color: #000901;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid #00ff04;
+    
+}
+.tabs label:hover {
+    background-color: transparent;
+    color: #00fd0d;
+}
+.tab-content {
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    font-size: 17px;
+    line-height: 25px;
+    padding: 25px;
+    position: absolute;
+    top: 53px;
+    left: -57px;
+    background: darken(green, 15%);
+}
+/* The Magic */
+[id^="tab"]:checked + label {
+    top: 0;
+    padding-top: 17px;
+    background: darken(rgb(2, 50, 2), 15%);
+}
+[id^="tab"]:checked ~ [id^="tab-content"] {
+    display: block;
+}
+p.link {
+    clear: both;
+    margin: 380px 0 0 15px;
+}
+p.link a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: darken(rgb(2, 53, 2), 15%);
+    transition: all 0.2s ease-in;
+}
+p.link a:hover {
+    background-color: darken(rgb(0, 61, 0), 20%);
+}
+/* .curve{
+    position:absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+
+}
+.curve::before{
+  content:"";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #2e2b2b;
+  transform: translate(85%,60%);
+}
+.curve::after{
+  content:"";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #2e2b2b;
+  transform: translate(-4%,40%);
+} */
